@@ -48,7 +48,7 @@ def gen_quick_data():
         for value in values.split(','):
             #  replace the char code of empty word (□) to zero
             value_int = 0 if value == '9633' else int(value)
-            fout.write(int(value).to_bytes(2, byteorder='little'))
+            fout.write(int(value_int).to_bytes(2, byteorder='little'))
     fin.close()
     fout.close()
 
